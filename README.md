@@ -8,75 +8,24 @@ If you download ``CustomToolsSettings.txt``, you will need to replace a couple l
 To run the script, open a command line in the folder/directory where both the script and settings files are and run ``java CustomToolsHelper CustomToolsSettings.txt``, replacing ``CustomToolsSettings.txt`` if you have a different settings file.
 
 ### CustomToolsSettings format:
-The CustomToolsSettings file is organized into sections, each beginning with a header and usually ending with an ``END`` line. The order of these sections does not matter, as long as they are all there.
+The CustomToolsSettings file is organized into sections, each beginning with a header and usually ending with an ``END`` line. The order of these sections does not matter, as long as they are all there. I would reccommend looking at CustomToolsSettings.txt as you 
 
 #### ``DATAPACK_PATH`` and ``RESOURCE_PACK_PATH``
 These are the only sections you need to modify if you are using the default settings (which I'm not sure why you'd do that because you can just download the defualt settings here or on Modrinth). These are both only one line, so they don't need an ``END`` line. ``DATAPACK_PATH`` contains, as the placeholder suggests, a file path to the root folder of the datapack. This is where the script will write datapack files to. ``RESOURCE_PACK_PATH`` is the same, but the path to the resource pack instead.
 
-#### ``TOOL_MATERIALS``
+#### ``TOOL_MATERIALS`` and ``TOOL_TYPES``
+You probably shouldn't change either of these. ``TOOL_MATERIALS`` contains a list of the vanilla tool materials and ``TOOL_TYPES`` lists the vanilla tool types, both as they appear in the item's display name (not the namespace ID). The only reason I can think of for changing it would be if you are using a mod that adds more tools and you want to customize those too.
 
-```
-DATAPACK_PATH
-# Replace with the path to the root folder of the datapack (.../Custom Tools 1.0 (DP))
+#### ``HEAD_MATERIALS``
+Finally something interesting! ``HEAD_MATERIALS`` contains all the head materials, IDs, and crafting components for the custom tools. They are written in the format ``<material_name>:<Double Digit ID>:[<Crafting Component>]``, for example, ``oak:01:Oak Planks``. The format is split into three parts, separated by colons (``:``). The first part is the material name, written as it appears in the texture files and will appear in the model files (snake_case is reccomended). The second part is the numeric ID, used to compute the CustomModelData the item will use (which is, for those curious, ``1<Head ID><Handle ID><Trim ID>``). The ID must be 2 digits, so ``00``-``99`` are valid. The third part is the crafting component, which is optional. If it is not included, the head material can't be crafted. The crafting component is written as it appears in the item's display name.
 
-RESOURCE_PACK_PATH
-# Replace with the path to the root folder of the resource pack (.../Custom Tools 1.0 (RP))
+The head material is different from the trim or handle materials in that it depends on the vanilla material of the tool. Each vanilla material has its own set of IDs. The vanilla materials must be listed first with the ID ``00``, in the order they are written in ``TOOL_MATERIALS`` (but still snake_case). The script assumes the first custom material in the list is for the first vanilla material, and then keeps that assumption until it hits another ID ``00``, at which point it switches to the next vanilla material, and so on.
 
-TOOL_MATERIALS
-<Material Name>
-[<...>]
-END
+#### ``HANDLE_MATERIALS``
+``HANDLE_MATERIALS`` is quite similar to ``HEAD_MATERIALS``, except it doesn't depend on the vanilla tool, so it's simply one of each ID. It uses the same three part format as the head, with the addition of a syntax for requiring a specific custom model data on the crafting component: ``<Crafting Component>[{CustomModelData ID}]``. For example, ``Stick{1}``. This allows the use of custom sticks to craft custom handles. ID 00 should be used for the default stick.
 
-TOOL_TYPES
-<Tool Name>
-[<...>]
-END
+#### ``TRIM_MATERIALS``
+``TRIM_MATERIALS`` is the same as ``HANDLE_MATERIALS``, but it doesn't allow custom model data on crafting components. ID 00 is automatically added as no trim.
 
-
-HEAD_MATERIALS
-<material_name>:<Double Digit ID>:[<Crafting Component>]
-[<...>]
-END
-
-HANDLE_MATERIALS
-<material_name>:<Double Digit ID>:[<Crafting Component>[{<CustomModelData ID>}]]
-[<...>]
-END
-
-TRIM_MATERIALS
-amethyst:01:Amethyst Shard
-copper:02:Copper Ingot
-diamond:03:Diamond
-emerald:04:Emerald
-golden:05:Gold Ingot
-iron:06:Iron Ingot
-lapis:07:Lapis Lazuli
-netherite:08:Netherite Ingot
-quartz:09:Nether Quartz
-redstone:10:Redstone Dust
-END
-
-STICKS
-oak:1:Oak Log
-birch:2:Birch Log
-spruce:3:Spruce Log
-jungle:4:Jungle Log
-acacia:5:Acacia Log
-dark_oak:6:Dark Oak Log
-mangrove:7:Mangrove Log
-cherry:8:Cherry Log
-warped:10:Warped Stem
-crimson:11:Crimson Stem
-netherite:14:Netherite Ingot
-stripped_oak:15:Stripped Oak Log
-stripped_birch:16:Stripped Birch Log
-stripped_spruce:17:Stripped Spruce Log
-stripped_jungle:18:Stripped Jungle Log
-stripped_acacia:19:Stripped Acacia Log
-stripped_dark_oak:20:Stripped Dark Oak Log
-stripped_mangrove:21:Stripped Mangrove Log
-stripped_cherry:22:Stripped Cherry Log
-stripped_warped:23:Stripped Warped Stem
-stripped_crimson:24:Stripped Crimson Stem
-END
-```
+#### ``STICKS``
+``STICKS`` is once again similar to the others. It doesn't allow custom model data on crafting components, and the unique thing about it is that it doesn't need double digit IDs.
