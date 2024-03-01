@@ -1,8 +1,8 @@
 DATAPACK_PATH
-# Replace with the path to the root folder of the datapack (.../Custom Tools 1.0 (DP))
+# Replace this line with the path to the root folder of the datapack (.../Custom Tools 1.0 (DP))
 
 RESOURCE_PACK_PATH
-# Replace with the path to the root folder of the resource pack (.../Custom Tools 1.0 (RP))
+# Replace this line with the path to the root folder of the resource pack (.../Custom Tools 1.0 (RP))
 
 TOOL_MATERIALS
 Wooden
