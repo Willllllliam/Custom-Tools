@@ -1,0 +1,29 @@
+{
+"parent": "minecraft:item/handheld",
+"textures": {
+"layer0": "minecraft:item/stick"
+},
+"overrides": [
+{"predicate": {"custom_model_data": 1}, "model": "minecraft:item/oak_stick"},
+{"predicate": {"custom_model_data": 2}, "model": "minecraft:item/birch_stick"},
+{"predicate": {"custom_model_data": 3}, "model": "minecraft:item/spruce_stick"},
+{"predicate": {"custom_model_data": 4}, "model": "minecraft:item/jungle_stick"},
+{"predicate": {"custom_model_data": 5}, "model": "minecraft:item/acacia_stick"},
+{"predicate": {"custom_model_data": 6}, "model": "minecraft:item/dark_oak_stick"},
+{"predicate": {"custom_model_data": 7}, "model": "minecraft:item/mangrove_stick"},
+{"predicate": {"custom_model_data": 8}, "model": "minecraft:item/cherry_stick"},
+{"predicate": {"custom_model_data": 10}, "model": "minecraft:item/warped_stick"},
+{"predicate": {"custom_model_data": 11}, "model": "minecraft:item/crimson_stick"},
+{"predicate": {"custom_model_data": 14}, "model": "minecraft:item/netherite_stick"},
+{"predicate": {"custom_model_data": 15}, "model": "minecraft:item/stripped_oak_stick"},
+{"predicate": {"custom_model_data": 16}, "model": "minecraft:item/stripped_birch_stick"},
+{"predicate": {"custom_model_data": 17}, "model": "minecraft:item/stripped_spruce_stick"},
+{"predicate": {"custom_model_data": 18}, "model": "minecraft:item/stripped_jungle_stick"},
+{"predicate": {"custom_model_data": 19}, "model": "minecraft:item/stripped_acacia_stick"},
+{"predicate": {"custom_model_data": 20}, "model": "minecraft:item/stripped_dark_oak_stick"},
+{"predicate": {"custom_model_data": 21}, "model": "minecraft:item/stripped_mangrove_stick"},
+{"predicate": {"custom_model_data": 22}, "model": "minecraft:item/stripped_cherry_stick"},
+{"predicate": {"custom_model_data": 23}, "model": "minecraft:item/stripped_warped_stick"},
+{"predicate": {"custom_model_data": 24}, "model": "minecraft:item/stripped_crimson_stick"}
+]
+}

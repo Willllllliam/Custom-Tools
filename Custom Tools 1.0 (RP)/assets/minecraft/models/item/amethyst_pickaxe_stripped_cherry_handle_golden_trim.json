@@ -1,0 +1,8 @@
+{
+"parent": "minecraft:item/handheld",
+"textures": {
+"layer0": "minecraft:item/stripped_cherry_pickaxe_handle",
+"layer1": "minecraft:item/amethyst_pickaxe_head",
+"layer2": "minecraft:item/golden_pickaxe_trim"
+}
+}

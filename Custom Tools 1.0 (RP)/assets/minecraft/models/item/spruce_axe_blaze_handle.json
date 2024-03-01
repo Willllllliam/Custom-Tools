@@ -1,0 +1,7 @@
+{
+"parent": "minecraft:item/handheld",
+"textures": {
+"layer0": "minecraft:item/blaze_axe_handle",
+"layer1": "minecraft:item/spruce_axe_head"
+}
+}

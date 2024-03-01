@@ -1,0 +1,8 @@
+{
+"parent": "minecraft:item/handheld",
+"textures": {
+"layer0": "minecraft:item/acacia_hoe_handle",
+"layer1": "minecraft:item/wooden_hoe_head",
+"layer2": "minecraft:item/copper_hoe_trim"
+}
+}

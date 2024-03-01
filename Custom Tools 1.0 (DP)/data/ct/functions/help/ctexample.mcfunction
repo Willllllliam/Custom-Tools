@@ -1,0 +1,3 @@
+scoreboard players reset @s ctexample
+
+tellraw @s ["",{"text":"Custom Tools Help\n----------------------","bold":true,"color":"gold"},{"text":"\n"},{"text":"Example tool","bold":true},{"text":": Deepslate pickaxe with spruce handle and copper trim\nIngredients:\n1 Stone Pickaxe\n1 Cobbled Deepslate\n1 Spruce Log (not consumed)\n1 Stick\n1 Copper Ingot\n"},{"text":"Next >","underlined":true,"color":"dark_aqua","clickEvent":{"action":"run_command","value":"/trigger ctsteps"}}]

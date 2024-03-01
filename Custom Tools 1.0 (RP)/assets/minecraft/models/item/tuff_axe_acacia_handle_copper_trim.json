@@ -1,0 +1,8 @@
+{
+"parent": "minecraft:item/handheld",
+"textures": {
+"layer0": "minecraft:item/acacia_axe_handle",
+"layer1": "minecraft:item/tuff_axe_head",
+"layer2": "minecraft:item/copper_axe_trim"
+}
+}

@@ -1,0 +1,8 @@
+{
+"parent": "minecraft:item/handheld",
+"textures": {
+"layer0": "minecraft:item/stripped_mangrove_axe_handle",
+"layer1": "minecraft:item/iron_axe_head",
+"layer2": "minecraft:item/emerald_axe_trim"
+}
+}

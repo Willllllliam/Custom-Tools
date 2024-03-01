@@ -1,0 +1,8 @@
+{
+"parent": "minecraft:item/handheld",
+"textures": {
+"layer0": "minecraft:item/spruce_shovel_handle",
+"layer1": "minecraft:item/birch_shovel_head",
+"layer2": "minecraft:item/amethyst_shovel_trim"
+}
+}

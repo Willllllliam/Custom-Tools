@@ -1,0 +1,7 @@
+{
+"parent": "minecraft:item/handheld",
+"textures": {
+"layer0": "minecraft:item/stripped_birch_axe_handle",
+"layer1": "minecraft:item/stone_axe_head"
+}
+}

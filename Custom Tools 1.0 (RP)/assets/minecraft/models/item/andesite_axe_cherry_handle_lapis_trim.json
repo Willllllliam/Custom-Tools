@@ -1,0 +1,8 @@
+{
+"parent": "minecraft:item/handheld",
+"textures": {
+"layer0": "minecraft:item/cherry_axe_handle",
+"layer1": "minecraft:item/andesite_axe_head",
+"layer2": "minecraft:item/lapis_axe_trim"
+}
+}
