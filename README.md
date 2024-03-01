@@ -10,10 +10,10 @@ To run the script, open a command line in the folder/directory where both the sc
 ### CustomToolsSettings format:
 ```
 DATAPACK_PATH
-
+# Replace with the path to the root folder of the datapack (.../Custom Tools 1.0 (DP))
 
 RESOURCE_PACK_PATH
-
+# Replace with the path to the root folder of the resource pack (.../Custom Tools 1.0 (RP))
 
 TOOL_MATERIALS
 Wooden
