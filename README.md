@@ -8,11 +8,12 @@ If you download ``CustomToolsSettings.txt``, you will need to replace a couple l
 To run the script, open a command line in the folder/directory where both the script and settings files are and run ``java CustomToolsHelper CustomToolsSettings.txt``, replacing ``CustomToolsSettings.txt`` if you have a different settings file.
 
 ### CustomToolsSettings format:
-```DATAPACK_PATH
-/Users/williammckeever/Library/Application Support/minecraft/saves/BulkStorageTesting/datapacks/Custom Tools (DP)
+```
+DATAPACK_PATH
+
 
 RESOURCE_PACK_PATH
-/Users/williammckeever/Library/Application Support/minecraft/resourcepacks/Custom Tools (RP)
+
 
 TOOL_MATERIALS
 Wooden
@@ -127,4 +128,5 @@ stripped_mangrove:21:Stripped Mangrove Log
 stripped_cherry:22:Stripped Cherry Log
 stripped_warped:23:Stripped Warped Stem
 stripped_crimson:24:Stripped Crimson Stem
-END```
+END
+```
