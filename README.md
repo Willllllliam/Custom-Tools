@@ -8,7 +8,7 @@ If you download ``CustomToolsSettings.txt``, you will need to replace a couple l
 To run the script, open a command line in the folder/directory where both the script and settings files are and run ``java CustomToolsHelper CustomToolsSettings.txt``, replacing ``CustomToolsSettings.txt`` if you have a different settings file.
 
 ### CustomToolsSettings format:
-The CustomToolsSettings file is organized into sections, each beginning with a header and usually ending with an ``END`` line. The order of these sections does not matter, as long as they are all there. I would reccommend looking at CustomToolsSettings.txt as you 
+The CustomToolsSettings file is organized into sections, each beginning with a header and usually ending with an ``END`` line. The order of these sections does not matter, as long as they are all there. I would reccommend looking at CustomToolsSettings.txt as you read this, just to see an example of what is being talked about.
 
 #### ``DATAPACK_PATH`` and ``RESOURCE_PACK_PATH``
 These are the only sections you need to modify if you are using the default settings (which I'm not sure why you'd do that because you can just download the defualt settings here or on Modrinth). These are both only one line, so they don't need an ``END`` line. ``DATAPACK_PATH`` contains, as the placeholder suggests, a file path to the root folder of the datapack. This is where the script will write datapack files to. ``RESOURCE_PACK_PATH`` is the same, but the path to the resource pack instead.
